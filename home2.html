@@ -93,7 +93,7 @@
       <li style="background-image: url(images/img_bg_1.jpg);">
         <div class="overlay dark-overlay"></div>
 
-        <div class="container">
+        <div class="container-fluid">
           <div class="row js-fullheight align-center">
             <div class="col-md-10 col-md-offset-1 text-center">
 
@@ -135,7 +135,7 @@
       <li style="background-image: url(images/img_bg_2.jpg);">
         <div class="overlay dark-overlay"></div>
 
-        <div class="container">
+        <div class="container-fluid">
           <div class="row js-fullheight align-center">
             <div class="col-md-10 col-md-offset-1 text-center">
 
@@ -169,7 +169,7 @@
       <li style="background-image: url(images/img_bg_3.jpg);">
         <div class="overlay dark-overlay"></div>
 
-        <div class="container">
+        <div class="container-fluid">
           <div class="row js-fullheight align-center">
             <div class="col-md-10 col-md-offset-1 text-center">
 
@@ -205,7 +205,7 @@
 
 
 			<div class="magtandesign-about home2-about">
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- Section Header -->
     <div class="row text-center">
@@ -221,6 +221,7 @@
     </div>
 
     <!-- Content Row -->
+    <div class="container-fluid">
     <div class="row about-row">
 
       <!-- Left Content -->
@@ -247,15 +248,17 @@
       </div>
 
     </div>
+  </div>
 
     <!-- Feature Boxes -->
+<div class="container-fluid">
     <div class="row about-features">
 
       <div class="col-md-4 animate-box" data-animate-effect="fadeInUp">
         <div class="feature-card">
           <i class="icon-lightbulb"></i>
           <h4>Innovation First</h4>
-          <p>We explore modern smart home technologies designed for future.</p>
+          <p>We explore modern smart home technologies designed for our future homes.</p>
         </div>
       </div>
 
@@ -276,13 +279,14 @@
       </div>
 
     </div>
+  </div>
 
   </div>
 </div>
 
 			
 			<section class="home2-services">
-  <div class="container">
+  <div class="container-fluid">
 
     <!-- Header -->
     <div class="row text-center">
@@ -370,7 +374,7 @@
 
 			
 			<section class="home2-stats">
-  <div class="container">
+  <div class="container-fluid">
     <div class="row text-center">
       <div class="col-md-3 col-sm-6">
         <div class="stat-card">
@@ -398,7 +402,7 @@
             <i class="flaticon-architect-with-helmet"></i>
           </div>
           <h2 class="counter" data-count="300">0</h2>
-          <p>Smart Devices Integrated</p>
+          <p>Smart Devices</p>
         </div>
       </div>
 
@@ -417,6 +421,7 @@
 
 
 			<section class="home2-products">
+        <div class="container-fluid">
   <div class="magtandesign-narrow-content">
 
     <div class="row">
@@ -440,7 +445,7 @@
           </div>
           <div class="home2-product-info">
             <h3>Smart Home Panel</h3>
-            <p>Centralized control for all smart devices</p>
+            <p>Centralized control for devices</p>
           </div>
         </div>
       </div>
@@ -479,11 +484,13 @@
 
     </div>
   </div>
+</div>
 </section>
 
 
 
 			<section class="home2-blog">
+        <div class="container-fluid">
   <div class="magtandesign-narrow-content">
 
     <div class="row">
@@ -504,7 +511,7 @@
           <div class="home2-blog-content">
             <span class="blog-date">April 14, 2025</span>
             <h3>How Smart Homes Are Changing Modern Living</h3>
-            <p>Smart lighting, automation and security systems are redefining comfort and safety.</p>
+            <p>Smart lighting, automation and security systems are redefining.</p>
             <a href="blog.html" class="read-more">Read More <i class="icon-arrow-right3"></i></a>
           </div>
         </div>
@@ -540,10 +547,12 @@
 
     </div>
   </div>
+</div>
 </section>
 
 
 			<section class="home2-contact-cta">
+        <div class="container-fluid">
   <div class="magtandesign-narrow-content">
     <div class="row align-items-center">
 
@@ -564,6 +573,7 @@
 
     </div>
   </div>
+</div>
 </section>
 
 			<footer class="site-footer">
@@ -635,6 +645,31 @@
 	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach(counter => {
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+      const target = +counter.getAttribute("data-count");
+      const current = +counter.innerText;
+
+      const increment = target / 200; // speed control
+
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCounter, 10);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCounter();
+  });
+});
+</script>
 
 	</body>
 </html>
