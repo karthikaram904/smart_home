@@ -1405,6 +1405,7 @@ body.offcanvas {
   margin-bottom: 30px;
   border-radius: 6px;
   transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .services-box .icon {
@@ -2381,4 +2382,8 @@ body.dark .theme-btn {
     content: "+";
     margin-left: 3px;
     font-weight: 600;
+}
+.hero-content {
+  text-align: center;
+  width: 100%;
 }
