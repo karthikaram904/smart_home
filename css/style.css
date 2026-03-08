@@ -2377,3 +2377,8 @@ body.dark .theme-btn {
   width: 200px;
   margin-bottom: 20px;
 }
+.magtandesign-counter::after,.counter:after {
+    content: "+";
+    margin-left: 3px;
+    font-weight: 600;
+}
