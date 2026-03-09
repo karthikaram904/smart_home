@@ -2274,6 +2274,7 @@ body.dark .theme-btn {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
+  font-size: 15px;
 }
 
 .nav-links li a:hover {
